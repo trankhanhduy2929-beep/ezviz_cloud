@@ -6,8 +6,11 @@ from collections.abc import Mapping
 from typing import Any
 from urllib.parse import quote
 
-from pyezvizapi.exceptions import HTTPError, InvalidHost, PyEzvizError
-
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import (
+    HTTPError,
+    InvalidHost,
+    PyEzvizError,
+)
 from homeassistant.components import ffmpeg
 from homeassistant.components.camera import Camera, CameraEntityFeature
 from homeassistant.components.stream import CONF_USE_WALLCLOCK_AS_TIMESTAMPS

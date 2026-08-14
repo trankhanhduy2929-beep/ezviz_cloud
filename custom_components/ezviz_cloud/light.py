@@ -6,10 +6,9 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any, ClassVar
 
-from pyezvizapi import EzvizClient
-from pyezvizapi.constants import DeviceSwitchType, SupportExt
-from pyezvizapi.exceptions import HTTPError, PyEzvizError
-
+from custom_components.ezviz_cloud.vendor.pyezvizapi import EzvizClient
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import DeviceSwitchType, SupportExt
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import HTTPError, PyEzvizError
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS,
     ColorMode,

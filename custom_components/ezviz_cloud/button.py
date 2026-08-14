@@ -6,10 +6,9 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any, Literal
 
-from pyezvizapi import EzvizClient
-from pyezvizapi.constants import SupportExt
-from pyezvizapi.exceptions import HTTPError, PyEzvizError
-
+from custom_components.ezviz_cloud.vendor.pyezvizapi import EzvizClient
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import SupportExt
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import HTTPError, PyEzvizError
 from homeassistant.components.button import (
     ButtonDeviceClass,
     ButtonEntity,

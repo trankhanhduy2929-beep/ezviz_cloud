@@ -8,10 +8,10 @@ from datetime import timedelta
 import logging
 from typing import Any
 
-from pyezvizapi import EzvizClient
-from pyezvizapi.constants import SupportExt
-from pyezvizapi.exceptions import HTTPError, PyEzvizError
-from pyezvizapi.feature import (
+from custom_components.ezviz_cloud.vendor.pyezvizapi import EzvizClient
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import SupportExt
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import HTTPError, PyEzvizError
+from custom_components.ezviz_cloud.vendor.pyezvizapi.feature import (
     custom_voice_volume_config,
     get_algorithm_value,
     has_algorithm_subtype,
@@ -21,7 +21,6 @@ from pyezvizapi.feature import (
     night_vision_payload,
     resolve_channel,
 )
-
 from homeassistant.components.number import NumberEntity, NumberEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory

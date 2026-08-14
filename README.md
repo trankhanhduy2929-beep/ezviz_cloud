@@ -8,7 +8,7 @@ Custom integration cho [Home Assistant](https://www.home-assistant.io/) dùng t�
 
 - Repository: <https://github.com/trankhanhduy2929-beep/ezviz_cloud>
 - Domain: `ezviz_cloud`
-- Phiên bản hiện tại: `0.3.5`
+- Phiên bản hiện tại: `0.3.6`
 - Giấy phép: GPL-3.0
 
 ## Tính năng
@@ -24,6 +24,7 @@ Custom integration cho [Home Assistant](https://www.home-assistant.io/) dùng t�
 - Có Repair issue khi camera cần encryption key/verification code cho RTSP.
 - Có diagnostics redaction; không ghi mật khẩu tài khoản vào Config Entry.
 - Có icon integration tại `custom_components/ezviz_cloud/brand/icon.png`.
+- Đóng gói riêng `pyezvizapi 1.0.5.0` trong namespace nội bộ, không xung đột với EZVIZ integration mặc định của Home Assistant.
 
 ## Yêu cầu
 
@@ -178,6 +179,12 @@ target:
 ### Icon chưa hiện
 
 - Restart Home Assistant sau khi cài bản mới.
+
+### Xung đột với EZVIZ integration mặc định
+
+- Có thể giữ đồng thời EZVIZ integration mặc định và `EZVIZ Cloud Auto`.
+- Bản `0.3.6` không dùng chung module global `pyezvizapi`; mỗi integration giữ phiên bản thư viện riêng.
+- Sau khi nâng cấp, xóa thư mục custom cũ nếu cần, chép lại `custom_components/ezviz_cloud`, rồi restart Home Assistant.
 - Tải lại frontend không dùng cache.
 - Kiểm tra file `custom_components/ezviz_cloud/brand/icon.png` tồn tại đúng vị trí.
 

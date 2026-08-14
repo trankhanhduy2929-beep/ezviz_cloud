@@ -1,8 +1,8 @@
 """EZVIZ authentication and camera-key bootstrap helpers.
 
 Private pyezvizapi HTTP helpers are intentionally isolated here. The integration
-pins a tested pyezvizapi version, and no response body, token, account, serial, or
-camera key is included in raised exception messages or logs.
+vendors a tested pyezvizapi version, and no response body, token, account, serial,
+or camera key is included in raised exception messages or logs.
 """
 
 from __future__ import annotations
@@ -13,11 +13,12 @@ from dataclasses import dataclass
 from typing import Any
 from urllib.parse import urlencode
 
-from pyezvizapi import api_endpoints
-from pyezvizapi.client import EzvizClient
-from pyezvizapi.constants import FEATURE_CODE
-from pyezvizapi.exceptions import HTTPError, PyEzvizError
 import requests
+
+from custom_components.ezviz_cloud.vendor.pyezvizapi import api_endpoints
+from custom_components.ezviz_cloud.vendor.pyezvizapi.client import EzvizClient
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import FEATURE_CODE
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import HTTPError, PyEzvizError
 
 API_ENDPOINT_CAM_ENCRYPTKEY = api_endpoints.API_ENDPOINT_CAM_ENCRYPTKEY
 API_ENDPOINT_DEVICES_ENCRYPTKEY_BATCH = getattr(
@@ -84,7 +85,7 @@ def _extract_area_id(payload: Any) -> int | None:
 
 
 def login_with_area_id(client: EzvizClient, sms_code: str | int | None = None) -> EzvizLoginResult:
-    """Login while capturing the area id discarded by pyezvizapi 1.0.5.0."""
+    """Login while capturing the area id discarded by vendored pyezvizapi."""
     captured_area_id: int | None = None
 
     def capture_login_area(response: requests.Response, *_: Any, **__: Any) -> requests.Response:

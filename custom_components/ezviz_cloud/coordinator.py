@@ -6,15 +6,14 @@ from datetime import timedelta
 import logging
 from typing import Any
 
-from pyezvizapi.client import EzvizClient
-from pyezvizapi.exceptions import (
+from custom_components.ezviz_cloud.vendor.pyezvizapi.client import EzvizClient
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import (
     EzvizAuthTokenExpired,
     EzvizAuthVerificationCode,
     HTTPError,
     InvalidURL,
     PyEzvizError,
 )
-
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryAuthFailed

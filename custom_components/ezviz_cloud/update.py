@@ -6,8 +6,7 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 
-from pyezvizapi import HTTPError, PyEzvizError
-
+from custom_components.ezviz_cloud.vendor.pyezvizapi import HTTPError, PyEzvizError
 from homeassistant.components.update import (
     UpdateDeviceClass,
     UpdateEntity,

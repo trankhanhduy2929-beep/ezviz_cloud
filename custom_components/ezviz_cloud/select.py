@@ -6,10 +6,10 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 
-from pyezvizapi.client import EzvizClient
-from pyezvizapi.constants import SoundMode, SupportExt
-from pyezvizapi.exceptions import HTTPError, PyEzvizError
-from pyezvizapi.feature import (
+from custom_components.ezviz_cloud.vendor.pyezvizapi.client import EzvizClient
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import SoundMode, SupportExt
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import HTTPError, PyEzvizError
+from custom_components.ezviz_cloud.vendor.pyezvizapi.feature import (
     blc_current_value,
     day_night_mode_value,
     day_night_sensitivity_value,
@@ -20,7 +20,6 @@ from pyezvizapi.feature import (
     night_vision_mode_value,
     resolve_channel,
 )
-
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory

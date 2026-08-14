@@ -9,9 +9,9 @@ from typing import Any
 
 from PIL import Image as PilImage, ImageFile, UnidentifiedImageError
 from propcache.api import cached_property
-from pyezvizapi.exceptions import PyEzvizError
-from pyezvizapi.utils import decrypt_image
 
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import PyEzvizError
+from custom_components.ezviz_cloud.vendor.pyezvizapi.utils import decrypt_image
 from homeassistant.components.image import Image, ImageEntity, ImageEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, callback

@@ -3,9 +3,8 @@
 from collections.abc import Mapping
 import logging
 
-from pyezvizapi.client import EzvizClient
-from pyezvizapi.mqtt import MQTTClient
-
+from custom_components.ezviz_cloud.vendor.pyezvizapi.client import EzvizClient
+from custom_components.ezviz_cloud.vendor.pyezvizapi.mqtt import MQTTClient
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import device_registry as dr
 

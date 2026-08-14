@@ -11,10 +11,10 @@ import logging
 from urllib.parse import urlsplit
 
 from aiohttp import ClientError, ClientTimeout, web
-from pyezvizapi.constants import HIK_ENCRYPTION_HEADER
-from pyezvizapi.exceptions import PyEzvizError
-from pyezvizapi.utils import decrypt_image
 
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import HIK_ENCRYPTION_HEADER
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import PyEzvizError
+from custom_components.ezviz_cloud.vendor.pyezvizapi.utils import decrypt_image
 from homeassistant.components.http import HomeAssistantView
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession

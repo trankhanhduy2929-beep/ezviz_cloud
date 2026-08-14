@@ -7,9 +7,11 @@ from functools import partial
 import logging
 from typing import Any
 
-from pyezvizapi.client import EzvizClient
-from pyezvizapi.constants import DeviceCatagories
-from pyezvizapi.exceptions import (
+import voluptuous as vol
+
+from custom_components.ezviz_cloud.vendor.pyezvizapi.client import EzvizClient
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import DeviceCatagories
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import (
     AuthTestResultFailed,
     DeviceException,
     EzvizAuthVerificationCode,
@@ -17,9 +19,7 @@ from pyezvizapi.exceptions import (
     InvalidURL,
     PyEzvizError,
 )
-from pyezvizapi.test_cam_rtsp import TestRTSPAuth
-import voluptuous as vol
-
+from custom_components.ezviz_cloud.vendor.pyezvizapi.test_cam_rtsp import TestRTSPAuth
 from homeassistant import config_entries
 from homeassistant.config_entries import (
     ConfigEntry,

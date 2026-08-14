@@ -2,8 +2,7 @@
 
 from __future__ import annotations
 
-from pyezvizapi.exceptions import HTTPError, PyEzvizError
-
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import HTTPError, PyEzvizError
 from homeassistant.components.text import TextEntity, TextEntityDescription, TextMode
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory

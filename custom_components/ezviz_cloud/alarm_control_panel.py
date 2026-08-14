@@ -6,9 +6,8 @@ from dataclasses import dataclass
 from datetime import timedelta
 import logging
 
-from pyezvizapi import PyEzvizError
-from pyezvizapi.constants import DefenseModeType
-
+from custom_components.ezviz_cloud.vendor.pyezvizapi import PyEzvizError
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import DefenseModeType
 from homeassistant.components.alarm_control_panel import (
     AlarmControlPanelEntity,
     AlarmControlPanelEntityDescription,

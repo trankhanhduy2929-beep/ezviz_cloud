@@ -6,15 +6,22 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 
-from pyezvizapi import EzvizClient
-from pyezvizapi.constants import DeviceCatagories, DeviceSwitchType, SupportExt
-from pyezvizapi.exceptions import HTTPError, InvalidHost, PyEzvizError
-from pyezvizapi.feature import (
+from custom_components.ezviz_cloud.vendor.pyezvizapi import EzvizClient
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import (
+    DeviceCatagories,
+    DeviceSwitchType,
+    SupportExt,
+)
+from custom_components.ezviz_cloud.vendor.pyezvizapi.exceptions import (
+    HTTPError,
+    InvalidHost,
+    PyEzvizError,
+)
+from custom_components.ezviz_cloud.vendor.pyezvizapi.feature import (
     has_osd_overlay,
     supplement_light_available,
     supplement_light_enabled,
 )
-
 from homeassistant.components.switch import (
     SwitchDeviceClass,
     SwitchEntity,

@@ -6,8 +6,7 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any, cast
 
-from pyezvizapi.constants import SupportExt
-
+from custom_components.ezviz_cloud.vendor.pyezvizapi.constants import SupportExt
 from homeassistant.components.sensor import (
     SensorDeviceClass,
     SensorEntity,

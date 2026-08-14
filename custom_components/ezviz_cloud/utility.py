@@ -6,7 +6,7 @@ from collections.abc import Callable, Iterable, Iterator, Mapping
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any, cast
 
-from pyezvizapi.feature import (
+from custom_components.ezviz_cloud.vendor.pyezvizapi.feature import (
     lens_defog_config,
     normalize_port_security,
     port_security_config,
@@ -15,10 +15,15 @@ from pyezvizapi.feature import (
 )
 
 if TYPE_CHECKING:
-    from pyezvizapi.client import EzvizClient
+    from custom_components.ezviz_cloud.vendor.pyezvizapi.client import EzvizClient
 
 
-from pyezvizapi.utils import WILDCARD_STEP, decode_json, first_nested, iter_nested
+from custom_components.ezviz_cloud.vendor.pyezvizapi.utils import (
+    WILDCARD_STEP,
+    decode_json,
+    first_nested,
+    iter_nested,
+)
 
 
 def coerce_int(value: Any) -> int | None:
