@@ -13,14 +13,18 @@ from dataclasses import dataclass
 from typing import Any
 from urllib.parse import urlencode
 
-from pyezvizapi.api_endpoints import (
-    API_ENDPOINT_CAM_ENCRYPTKEY,
-    API_ENDPOINT_DEVICES_ENCRYPTKEY_BATCH,
-)
+from pyezvizapi import api_endpoints
 from pyezvizapi.client import EzvizClient
 from pyezvizapi.constants import FEATURE_CODE
 from pyezvizapi.exceptions import HTTPError, PyEzvizError
 import requests
+
+API_ENDPOINT_CAM_ENCRYPTKEY = api_endpoints.API_ENDPOINT_CAM_ENCRYPTKEY
+API_ENDPOINT_DEVICES_ENCRYPTKEY_BATCH = getattr(
+    api_endpoints,
+    "API_ENDPOINT_DEVICES_ENCRYPTKEY_BATCH",
+    "/v3/devices/encryptkey/query/batch/risk",
+)
 
 OTP_REQUIRED_CODES = {20002, 120002}
 OTP_INVALID_CODES = {1012, 101011}

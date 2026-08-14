@@ -8,7 +8,7 @@ Custom integration cho [Home Assistant](https://www.home-assistant.io/) dùng t�
 
 - Repository: <https://github.com/trankhanhduy2929-beep/ezviz_cloud>
 - Domain: `ezviz_cloud`
-- Phiên bản hiện tại: `0.3.4`
+- Phiên bản hiện tại: `0.3.5`
 - Giấy phép: GPL-3.0
 
 ## Tính năng
