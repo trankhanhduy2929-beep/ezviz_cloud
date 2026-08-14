@@ -2,14 +2,14 @@
   "domain": "ezviz_cloud",
   "name": "EZVIZ Cloud Auto",
   "after_dependencies": ["media_source"],
-  "codeowners": [],
+  "codeowners": ["@trankhanhduy2929-beep"],
   "config_flow": true,
   "dependencies": ["ffmpeg", "http"],
-  "documentation": "https://github.com/RenierM26/ha-ezviz",
+  "documentation": "https://github.com/trankhanhduy2929-beep/ezviz_cloud",
   "integration_type": "hub",
-  "issue_tracker": "https://github.com/RenierM26/ha-ezviz/issues",
+  "issue_tracker": "https://github.com/trankhanhduy2929-beep/ezviz_cloud/issues",
   "iot_class": "cloud_polling",
   "loggers": ["paho_mqtt", "pyezvizapi"],
   "requirements": ["pyezvizapi==1.0.5.0"],
-  "version": "0.3.3"
+  "version": "0.3.4"
 }
