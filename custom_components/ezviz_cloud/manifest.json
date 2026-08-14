@@ -1,0 +1,15 @@
+{
+  "domain": "ezviz_cloud",
+  "name": "EZVIZ Cloud Auto",
+  "after_dependencies": ["media_source"],
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["ffmpeg", "http"],
+  "documentation": "https://github.com/RenierM26/ha-ezviz",
+  "integration_type": "hub",
+  "issue_tracker": "https://github.com/RenierM26/ha-ezviz/issues",
+  "iot_class": "cloud_polling",
+  "loggers": ["paho_mqtt", "pyezvizapi"],
+  "requirements": ["pyezvizapi==1.0.5.0"],
+  "version": "0.3.3"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "EZVIZ Cloud Auto",
+  "render_readme": true,
+  "homeassistant": "2024.12.0",
+  "hacs": "1.6.0"
+}
